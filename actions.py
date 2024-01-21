@@ -1,4 +1,5 @@
-planted_crops = [{}]
+from crops import Crop, Potatoes
+planted_crops = []
 def menu():
     choice = input('What would you like to do?\n' + 
                    '1. Add crop\n' +
@@ -12,5 +13,7 @@ def menu():
             match crop:
                 case '1':
                     print("\nYou decided to plant potatoes.")
-
+                    c1 = Potatoes('Potatoes', 'Temperate')
+                    planted_crops.append(c1)
+                    print(c1.name + " do well in a " + c1.region + " region")
             
