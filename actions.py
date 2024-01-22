@@ -1,5 +1,7 @@
 from crops import Crop, Potatoes
+
 planted_crops = []
+
 def menu():
     choice = input('What would you like to do?\n' + 
                    '1. Add crop\n' +
