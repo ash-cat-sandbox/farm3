@@ -4,12 +4,11 @@ from crops import Crop, Potatoes
 planted_crops = []
 
 def menu():
-    if planted_crops: 
-        for i in planted_crops:
-            i.water += 1
+    
     choice = input('What would you like to do?\n' + 
                    '1. Add crop\n' +
-                   '2. Crop status\n')
+                   '2. Crop status\n' +
+                   '4. Exit Game\n')
     
     match choice:
         case '1':
@@ -20,7 +19,13 @@ def menu():
                 case '1':
                     print("\nYou decided to plant potatoes.")
                     c1 = Potatoes('Potatoes', 'Temperate')
-                    planted_crops.append(c1)
                     print(c1.name + " do well in a " + c1.region + " region")
                     planted_crops.append(c1)
+        case '2':
+            for i in planted_crops:
+                if i.name == "Potatoes":
+                    if i.water >= 2:
+                        print("Your Potatoes look a little dry")
+        case '4':
+            exit()
             
