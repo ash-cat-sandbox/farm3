@@ -19,4 +19,7 @@ class Potatoes(Crop):
     self.weeds = 0
     self.fungus = 0
     self.harvest = 0
+    self.location = 0
+
+
   

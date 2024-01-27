@@ -19,11 +19,12 @@ def main():
         for i in planted_crops:
             if i.name == "Potatoes":
                 i.water += 1
+                i.harvest += 1
             #if planted_crops[i].name == "Potatoes":
               #  print("Your Potato crop needs water")
 
         menu()
-
+# What if they want to plant multiple of crops, I need to figure out how to storage them
 
 
 
