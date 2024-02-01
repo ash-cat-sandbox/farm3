@@ -1,16 +1,13 @@
-
+import itertools
 
 class Crop:
   def __init__(self, name):
     self.name = name
     
 
-# p1 = Person("John", 36)
-
-# print(p1.name)
-# print(p1.age)
     
 class Potatoes(Crop):
+  id_iter = itertools.count()
   def __init__(self, name, region):
     super().__init__(name)
     self.region = region
@@ -20,6 +17,7 @@ class Potatoes(Crop):
     self.fungus = 0
     self.harvest = 0
     self.location = 0
+    self.id = next(self.id_iter)
 
 
   
